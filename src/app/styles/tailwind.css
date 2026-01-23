@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-dark: var(--color-dark);
+  --color-light: var(--color-light);
+
+  --color-app-bg: var(--bg-app);
+  --color-surface: var(--bg-surface);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-main: var(--border-color);
+}
+
+@layer base {
+  :root {
+    /* Industry Level Professional Palette - Light */
+    --color-primary: #1e3a8a; /* Navy Blue */
+    --color-secondary: #64748b; /* Slate 500 */
+    --color-dark: #09090b; /* Zinc 950 */
+    --color-light: #f1f5f9; /* Slate 100 */
+
+    --bg-app: #f8fafc; /* Slate 50 - Very clean */
+    --bg-surface: #ffffff;
+    --text-main: #0f172a; /* Slate 900 */
+    --text-muted: #64748b; /* Slate 500 */
+    --border-color: #e2e8f0; /* Slate 200 */
+  }
+
+  .dark {
+    /* Industry Level Professional Palette - Dark */
+    --bg-app: #030712; /* Gray 950 */
+    --bg-surface: #111827; /* Gray 900 */
+    --text-main: #f8fafc; /* Slate 50 */
+    --text-muted: #94a3b8; /* Slate 400 */
+    --border-color: #1f2937; /* Gray 800 */
+    --color-primary: #3b82f6; /* Blue 500 - Brighter for dark mode */
+    --color-secondary: #64748b; /* Slate 500 */
+    --color-dark: #f8fafc; /* Inverted - now light */
+    --color-light: #09090b; /* Inverted - now dark */
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  * {
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+  }
+}
